@@ -1,0 +1,947 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+*/
+@font-face {
+    font-family: 'Acme';
+    src: url("../fonts/Acme-Regular.ttf");
+}
+/* CSS Variables */
+:root {
+    --green: lightseagreen;
+    --cyan: lightcyan;
+    /*
+    --green: rgb(255, 204, 0);
+    --cyan: rgb(247, 255, 200);
+    */
+}
+*{
+    box-sizing: border-box;
+}
+p {
+    color: #333333;
+}
+
+h3, p {
+    color: blue;
+}
+body {
+    /*background-color: #ffffff;
+    background-image: url("../images/bg2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+	background-size: cover;
+    background-attachment: fixed;*/
+	
+	/*background-size: cover in short code not working in safari */
+    background: #ffffff url("../images/bg2.jpg") no-repeat center center /cover fixed;
+
+    margin: 0;
+}
+section {
+    padding: 10px;
+}
+/*
+h1 {
+    background-color: yellow;
+}
+*/
+
+
+.accounting h3 {
+    color: red;
+}
+.business h3 {
+    color: green;
+}
+.content .business h3 {
+    color: orange;
+}
+.accounting p {
+    color: #333333;
+}
+.business.course p {
+    color: red;
+}
+.business p {
+    background-color: yellow;
+}
+
+/*
+The following example selects all <p> elements that are children of a <div> element
+*/
+.business > p {
+    background-color: lightblue;
+}
+
+/*
+The following example selects the first <p> element that are placed immediately after <div> elements
+*/
+.business + p {
+    background-color: lightgreen;
+}
+
+/*
+.business + div {
+    background-color: lightgreen;
+}
+*/
+/*
+The following example selects all <p> elements that are next siblings of <div> elements
+*/
+.science ~ p {
+    background-color: aqua;
+}
+
+/*
+    border-style: solid|dotted|dashed|double|groove
+    border-style: top right bottom left;
+*/
+.service-box {
+    /*
+    border-width: 5px;
+    border-color: red;
+    border-top-style: dotted
+    border-right-style: dashed;
+    border-bottom-style: solid;
+    border-left-style: double;
+    border-style: dotted dashed solid double;
+    */
+    border: 5px solid red;
+    border-radius: 10px;
+    margin:10px;
+    /*
+    margin: 10px auto;
+    margin: 10px 15px;
+    margin: 10px 0 0 0;
+    margin-left: 10px;
+    same rule for padding also
+    */
+    padding:15px;
+    width: 300px;
+    height: 150px;
+}
+.box1 {
+    max-width: 400px;
+}
+
+/*The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.
+Note: The margin property also affects the total space that the box will take up on the page, but the margin is not included in the actual size of the box. The box's total width and height stops at the border.*/
+
+.box2 {
+    border: 20px solid yellow;
+    padding:25px;
+    margin:20px;
+    /*box-sizing: border-box;*/
+}
+
+.box3 {
+    border: 20px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    /*
+    outline-width: 5px;
+    outline-color: red;
+    outline-style: dotted;
+    */
+    outline: 10px solid red;
+    outline-offset: 5px;
+}
+
+/*
+text-align: left|center|right|justify
+text-align-last: left|center|right|justify
+*/
+.box3 {
+    text-align: justify;
+    text-align-last: right;
+}
+
+.box4 p{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.box5 span {
+    /*vertical-align: sub;
+    vertical-align: super;*/
+    vertical-align: text-bottom;
+}
+.content-box {
+    background-color: #ffffff;
+    padding: 10px;
+}
+.content-box h3 {
+    /*text-decoration: overline;
+    text-decoration: underline;
+    text-decoration: line-through;
+    text-decoration: none;
+    */
+    /*
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 5px; 
+    */
+    
+    text-decoration: underline 2px double red;
+}
+
+/*
+    text-transform: uppercase|lowercase|capitalize
+*/
+.p1 {
+    text-transform: capitalize;
+}
+.p2 {
+    text-indent: 20px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 30px;
+    /*white-space: nowrap;*/
+}
+/*
+    The font property is a shorthand property for:
+    font-style
+    font-variant
+    font-weight
+    font-size/line-height
+    font-family
+*/
+.p3 {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+
+    font: italic 600 1.4em/20px Georgia, serif;
+}
+   
+/*
+1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+The size can be calculated from pixels to em using this formula: pixels/16=em
+*/
+.p3 span {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    font-variant: small-caps;
+    /* cursor: default|pointer|move|wait|progress*/
+    cursor: move;
+}
+.content-box h3 {
+    text-shadow: 2px 2px 2px #cccccc;
+    font-family: "Sofia", sans-serif;
+    font-size: 2em;
+    color: #333;
+}
+.content-box ul {
+    background-color: yellow;
+}
+.content-box ul li {
+    background-color: bisque;
+    list-style-type: square;
+    list-style-position: outside;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid;
+}
+table th {
+    height: 20px;
+    background-color: #333333;
+    color: #ffffff;
+}
+table th, table td {
+    padding: 5px;
+    text-align: left;
+}
+table tr:hover {
+    background-color: lightblue;
+}
+table tr:nth-child(even) {
+    background-color: lightgoldenrodyellow;
+}
+
+/*
+ pseudo classes
+*/
+li a:link { 
+    color: red;
+}
+li a:visited { 
+    color: green;
+}
+li a:active { 
+    color: blue;
+}
+li a:hover { 
+    color: orange;
+}
+li a
+.content p:first-child {
+    background-color: lightyellow;
+}
+
+/* 
+ pseudo elements
+*/
+.about p::first-line {
+    background-color: yellow;
+}
+.about p::first-letter {
+    font-size: 30px;
+    color:red;
+}
+
+p.about-para1::first-letter {
+    font-size: 50px;
+    color:green;
+}
+.content h1::after {
+    content: "\1f600";
+}
+.content h1::before {
+    content: "\1f331";
+}
+::selection {
+    background-color: pink;
+    color:brown
+}
+/*
+    attribute selectors
+*/
+.quick-links a[title] {
+    background-color:yellow;
+}
+.quick-links a[title="link2"] {
+    color:red;
+}
+
+/*
+display: block|inline|inline-block|flex|table|none|table-cell
+*/
+.quick-links a {
+    border: 1px solid red;
+    height: 50px;
+    width: 80px;
+    /* 
+    display: block;
+    display: none;
+    visibility: hidden;
+    */
+    display: inline-block;
+}
+.navbar {
+    background-color: #333333;
+    padding:10px;
+}
+.navbar ul{
+    padding:0;
+    margin:0;
+ }
+.navbar ul li {
+    display: inline;
+}
+.navbar ul li a {
+    background-color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+.navbar ul li a {
+    background-color: transparent;
+    color: #fff;
+}
+.navbar ul li a:hover {
+    color: orange;
+}
+.ab-p1 span {
+    /*
+    display: table;
+    display: table-cell;
+    */
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    border: 1px solid red;
+    vertical-align: middle;
+    text-align: center;
+}
+/* 
+    position: static|relative|absolute|fixed|sticky
+*/
+.ab-box1 {
+    border: 4px solid red;
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+.ab-box2 {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+.sticky-content {
+    background-color: orange;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    top:0;
+}
+
+.ab-box3 {
+    background-color: orange;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    z-index: 1;
+}
+/*
+overflow: visible|hidden|scroll|auto
+*/
+.ab-box4 {
+    width: 300px;
+    height: 100px;
+    border: 4px solid red;
+    margin-top: 10px;
+    overflow: auto;
+}
+.ab-box5 {
+    margin-top:20px;
+}
+.ab-box5-1 {
+    width:150px;
+    height:50px;
+    background-color: red;
+    float: left;
+}
+.ab-box5-2 {
+    width:200px;
+    height:50px;
+    background-color: yellow;
+    float: right;
+}
+.clearfix {
+    clear:both;
+}
+.ab-box6 {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid green;
+    width:50%;
+}
+.ab-box6 img {
+    float: right;
+    margin-left: 10px;
+}
+.ab-box6 img:hover {
+   opacity: 0.5;
+}
+.ab-box7 {
+    background: rgba(74, 74, 74, 0.1);
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #666666;
+    width:50%;
+}
+/*
+Form design
+*/
+.contact-form {
+    background-color: var(--cyan);
+    padding: 20px;
+    border: 4px solid var(--green);
+    width: 400px;
+}
+.form-group {
+    margin-bottom: 8px;
+}
+.form-group label {
+    width: 25%;
+    display: inline-block;
+}
+input[type=text], textarea, select {
+    width: 70%;
+    padding: 5px;
+    border: 2px solid var(--green);
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 5px;
+}
+input[type=text]:focus, textarea:focus {
+    border: 2px solid #777;
+    background-color: #f1f1f1;
+}
+/*
+resize: none|both|vertical|horizontal;
+*/
+textarea {
+    resize: none;
+}
+.btn {
+    /*
+    --green: green; override global variable
+    --btn-blue: blue; Create new local variable
+    */
+    background-color: var(--green);
+    color:#fff;
+    border: none;
+    padding:5px;
+    border-radius: 5px;
+    border: 2px solid var(--green);
+}
+/*
+Counters
+*/
+.ab-box8 {
+    counter-reset: section;
+}
+h2 {
+    counter-reset: subsection;
+}
+h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+h4::before {
+    counter-increment: subsection;
+    content: counter(section) ". " counter(subsection) ": ";
+}
+
+
+/*
+Specificity
+There are four categories which define the specificity level of a selector:
+Inline styles - Example: <h1 style="color: pink;">
+IDs - Example: #navbar
+Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+Elements and pseudo-elements - Example: h1, ::before
+*/
+
+#para-id1 {
+    color:blueviolet;
+}
+.para1 {
+    color: green;
+}
+p {
+    color:red;
+}
+
+.ab-box9 {
+    margin-top: 15px;
+    border: 2px solid red;
+    background-color: yellow;
+    text-align: center;
+    width: calc(100% - 200px);
+    position: relative;
+    left: 100px;
+}
+
+.ab-box10 {
+    margin-top: 15px;
+    border: 2px solid red;
+    background-color: yellow;
+    text-align: center;
+    width: max(100%, 400px);
+}
+
+/*
+gradients
+*/
+.ab-box11 {
+    margin-top: 15px;
+    width: 500px;
+    height: 100px;
+    background-image: linear-gradient(to right, red, yellow, green);
+    /*background-image: repeating-linear-gradient(to right, red, yellow 20%, green 10%);*/
+}
+.ab-box12 {
+    margin-top: 15px;
+    width: 300px;
+    height: 100px;
+    background-image: radial-gradient(red, yellow);
+}
+
+.ab-box13 {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    background-image: conic-gradient(red, yellow, green);
+}
+
+.contact-form {
+    /*
+    multiple shadow
+    box-shadow: 10px 10px 20px #555555, 10px 10px 30px red;
+    */
+    box-shadow: 10px 10px 20px #555555;
+}
+
+/*
+The CSS @font-face Rule
+*/
+.ab-box6 p {
+    font-family: 'Acme', sans-serif;
+}
+/* 2D */
+.ab-box14 {
+    margin-top: 15px;
+    border: 2px solid #666;
+    width: 300px;
+    height: 80px;
+    background-color: yellow;
+}
+.ab-box14 {
+    /*
+    transform: translate(20px, 50px); moves an element from its current position 
+    transform: scale(2,3); increases the <div> element to be two times of its original width, and three times of its original height
+    transform: scaleX(2); increases the <div> element to be two times of its original width
+    transform: scaleY(2); increases the <div> element to be two times of its original height
+    transform: skewX(20deg); The example skews the <div> element 20 degrees along the X-axis
+    transform: skew(20deg, 10deg); The following skews the <div> element 20 degrees along the X-axis, and 10 degrees along the Y-axis
+    */
+    transform: rotate(10deg);
+}
+
+/*
+CSS transitions allows you to change property values smoothly, over a given duration.
+Mouse over the element below to see a CSS transition effect
+transition-delay: 1s //The example has a 1 second delay before starting
+*/
+.ab-box15 {
+    margin-top: 15px;
+    border: 2px solid #666;
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    /*transition: width 2s linear 1s;*/
+    transition: width 2s, height 2s, transform 2s;
+    transition-delay: 1s;
+}
+.ab-box15:hover {
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+}
+
+/*
+Animation
+ animation: myfirst 5s linear 2s infinite alternate;
+*/
+.ab-box16 {
+    margin-top: 15px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background-color: red;
+    animation: xyz;
+    animation-duration: 4s;
+    /*
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    */
+
+    /*animation-direction: reverse;*/
+    animation-direction: alternate;
+}
+@keyframes xyz {
+    /*
+    from { background-color: red;}
+    to { background-color: yellow;}
+    */
+    /*
+    0% { background-color: red;}
+    25% { background-color: yellow;}
+    50% { background-color: green;}
+    100% { background-color: blue;}
+    */
+
+    0% { background-color: red; left:0px; top:0px }
+    25% { background-color: yellow; left:200px; top:0px;}
+    50% { background-color: green; left:200px; top:200px;}
+    75% { background-color: blue; left:0px; top:200px;}
+    100% { background-color: red; left:0px; top:0px }
+}
+
+/*
+fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit
+contain - The image keeps its aspect ratio, but is resized to fit within the given dimension
+cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+none - The image is not resized
+scale-down - the image is scaled down to the smallest version of none or contain
+
+object-fit: cover|contain|fill|none;
+
+The CSS object-position property is used to specify how an <img> or <video> should be positioned within its container.
+*/
+.img-box1 {
+    margin-top: 10px;
+}
+.img-box1 img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 40% 80%;
+}
+/*
+The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers:
+column-count
+column-gap
+column-rule-style
+column-rule-width
+column-rule-color
+column-rule
+column-span //The column-span property specifies how many columns an element should span across.
+column-width //The column-width property specifies a suggested, optimal width for the columns.
+*/
+.news {
+    margin-top: 15px;
+    column-count: 3;
+    /*
+    column-width: 100px;
+    */
+    column-gap: 50px;
+    /*
+    column-rule-style: solid;
+    column-rule-width: 5px;
+    column-rule-color: orange;
+    */
+    column-rule: 5px solid orange;
+}
+.news h3 {
+    column-span: all;
+}
+.container-multi {
+	column-width: 350px;
+	column-gap:15px;
+}
+.container-multi > .card{
+	margin-bottom:15px;
+	padding: 2px;
+	border: 1px solid #ccc;
+	break-inside: avoid;
+}
+.container-multi > .card img{
+	width: 100%;
+}
+/*
+CSS Variables
+
+The var() function is used to insert the value of a CSS variable.
+CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors over and over again, you can place them in variables.
+
+First of all: CSS variables can have a global or local scope.
+To create a variable with global scope, declare it inside the :root selector.
+To create a variable with local scope, declare it inside the selector that is going to use it.
+
+Note: check above form style
+*/
+
+/*
+Box Sizing
+*/
+.se-box1 {
+    border: 5px solid red;
+    padding: 15px;
+    width: 300px;
+    height: 100px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+.se-box2 {
+    border: 5px solid orange;
+    padding: 15px;
+    width: 300px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+/*
+The flex container properties are:
+flex-direction: column|column-reverse|row|row-reverse
+flex-wrap: wrap|nowrap|wrap-reverse
+flex-flow: row wrap //The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.
+justify-content: center|flex-start|flex-end|space-around|space-between|space-evenly
+align-items: center|flex-start|flex-end|stretch|baseline
+align-content:space-between|space-around|center|flex-start|flex-end|stretch
+
+SOLUTION: Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered:
+*/
+
+.flex-container {
+    display: flex;
+    background-color: blueviolet;
+    margin-top: 15px;
+    height: 300px;
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+The flex item properties are:
+order: 2 The order property specifies the order of the flex items.
+flex-grow:6 The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+flex-shrink
+flex-basis
+flex
+align-self
+*/
+
+.flex-container > div {
+    padding:10px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+}
+
+/*Responsive Grid View*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+float: left;
+padding: 15px;
+}
+  
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-border {
+border:1px solid #666;
+border: none;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+
+/*
+Grid
+display: grid|inline-grid
+column-gap: 10px;
+row-gap: 10px;
+gap: 50px 100px;
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: orange;
+    padding: 5px;
+    /*column-gap: 10px;
+    row-gap: 10px;*/
+}
+.grid-container .grid-item {
+    background-color: yellow;
+    padding: 10px;
+    border: 5px solid orange;
+    text-align: center;
+}
+
+/*
+ grid-column: 1 / 3 | 1 / span /3
+ grid-row:
+ grid-area: 1 / 2 / 5 / 6 The grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties.
+*/
+.grid-container .grid-item-2 {
+    /*grid-column: 1 / 3;
+    grid-row: 1 / 3;*/
+    grid-area: 1 / 2 / 5 / 6;
+}
+
+.grid-container-2 .grid-item-1 { grid-area: header;}
+.grid-container-2 .grid-item-2 { grid-area: left;}
+.grid-container-2 .grid-item-3 { grid-area: main;}
+.grid-container-2 .grid-item-4 { grid-area: right;}
+.grid-container-2 .grid-item-5 { grid-area: footer;}
+
+.grid-container-2 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'left main main main right right'
+    'left footer footer footer footer footer';
+    gap: 10px;
+    background-color: blue;
+    padding: 10px;
+}
+.grid-container-2 .grid-item {
+    background-color: lightblue;
+    text-align: center;
+    padding: 10px;
+}
+
+/*
+Media Queries
+*/
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {background-color: red;}
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    body {background-color: green;}
+    .grid-container { display: none;}
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    body {background-color: blue;}
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    body {background-color: orange;}
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    body {background-color: pink;}
+  }
+
+  @media only screen and (orientation: landscape) {
+    body {
+      background-color: white;
+    }
+  }
